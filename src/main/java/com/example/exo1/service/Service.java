@@ -30,11 +30,11 @@ public class Service {
         repository.deleteById(id);
     }
 
-    public void createDress(Car car){
+    public void createCar(Car car){
         repository.save(car);
     }
 
-    public void updateDress(Car car, int id){
+    public void updateCar(Car car, int id){
         repository.save(car);
     }
 

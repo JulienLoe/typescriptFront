@@ -6,7 +6,8 @@ import jakarta.persistence.*;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @Column(name = "_id")
+    private int _id;
     @Column(name = "_marque")
     private String _marque;
 
@@ -17,7 +18,7 @@ public class Car {
     private String _puissance;
 
     public Car(int id, String marque, String model, String puissance) {
-        this.id = id;
+        this._id = id;
         this._marque = marque;
         this._model = model;
         this._puissance = puissance;
@@ -28,11 +29,11 @@ public class Car {
     }
 
     public int getId() {
-        return id;
+        return _id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this._id = id;
     }
 
     public String get_marque() {

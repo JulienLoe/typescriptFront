@@ -33,11 +33,11 @@ public class Controller {
 
     @RequestMapping(method = RequestMethod.POST, value = "/car")
     public void createCarId(@RequestBody Car car){
-        service.createDress(car);
+        service.createCar(car);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/car/{id}")
     public void updateCarId(@RequestBody Car car, @PathVariable int id){
-        service.updateDress(car, id);
+        service.updateCar(car, id);
     }
 }
